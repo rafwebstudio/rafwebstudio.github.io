@@ -1,0 +1,23 @@
+name: Unpack previews
+on:
+  push:
+    paths:
+      - 'previews.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip and commit
+        run: |
+          if [ ! -f previews.zip ]; then echo "no zip"; exit 0; fi
+          unzip -o previews.zip -d .
+          rm previews.zip
+          git config user.name "rafwebstudio-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack previews" || echo "nothing to commit"
+          git push
