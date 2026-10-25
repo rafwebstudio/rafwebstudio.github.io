@@ -150,3 +150,5 @@ figcaption{font-size:.78rem;color:var(--gris);margin-top:12px;letter-spacing:.02
 @media(max-width:700px){.hero.plain:before{width:360px;height:360px;right:-160px;top:30%}}
 .legal h2{font-size:1.5rem;margin-top:1.6em}.legal ul{padding-left:1.2em}.legal li{margin-bottom:.4em}
 .pend-box{background:#fff8dc;border:1px dashed #c9a227;border-radius:6px;padding:20px 24px;color:#5a4300;font-size:.95rem;margin-bottom:24px}
+
+.quotes .quote{padding:36px 30px}.quotes .quote blockquote{font-size:1.1rem}.quotes .quote:before{left:24px}
